@@ -14,12 +14,12 @@
             <p>BTech Student | Aspiring Web Developer</p>
         </div>
     </header>
-   
+    <!-- Photo Section -->
     <section id="photo">
         <div class="container">
             <h2>My Photo</h2>
             <div class="photo-container">
-                <img src="download.png" alt="Arendra Sing Rajput">
+                <img src="/image/download.png" alt="Arendra Sing Rajput">
             </div>
         </div>
     </section>
@@ -31,27 +31,32 @@
         I'm currently working on building a portfolio website and am aiming to become a web developer. 
         I'm always eager to learn and take on new challenges.</p></pre>
         </div>
+        <div class="container">
+            <button onclick="window.location.href='about.html'">Learn More About Me</button>
+        </div>
     </section>
     <section id="education">
         <h2>Education</h2>
         
-
+        
         <div class="education-item">
           <h3>High School</h3>
           <p><strong>School:</strong> St. Thomas High School</p>
-          <p><strong>Class:</strong> 10th </p>
+          <p><strong>Class:</strong> 10th Grade</p>
           <p><strong>Marks:</strong> 59% (General Promotion due to COVID-19)</p>
           <p><strong>Year:</strong> 2019-2020</p>
         </div>
         
+      
         <div class="education-item">
           <h3>Higher Secondary School</h3>
           <p><strong>School:</strong> Chaitanya Higher Secondary School</p>
-          <p><strong>Class:</strong> 12th </p>
+          <p><strong>Class:</strong> 12th Grade</p>
           <p><strong>Marks:</strong> 76%</p>
           <p><strong>Year:</strong> 2022-2023</p>
         </div>
         
+ 
         <div class="education-item">
           <h3>Graduation</h3>
           <p><strong>Degree:</strong> B.Tech in Computer Science</p>
@@ -87,11 +92,40 @@
             </div>
         </div>
     </section>
-
+    <button id="scrollTopBtn" title="Go to top">Top</button>
     <footer>
         <div class="container">
             <p>&copy; 2025 Arendra Sing Rajput | All Rights Reserved</p>
         </div>
     </footer>
+    <script>
+ 
+        const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        };
+
+    
+        scrollTopBtn.onclick = function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        };
+
+   
+        window.addEventListener("scroll", function () {
+            const skills = document.querySelectorAll(".skill-progress");
+            skills.forEach((skill) => {
+                const skillPosition = skill.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight;
+                if (skillPosition < screenPosition) {
+                    skill.style.width = skill.getAttribute("data-progress");
+                }
+            });
+        });
+    </script>
 </body>
 </html>
