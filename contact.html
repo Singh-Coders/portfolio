@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arendra Singh Rajput - Contact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        .fade-in { animation: fadeIn 0.8s ease-out forwards; opacity: 0; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+        .nav-link { position: relative; }
+        .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background-color: #1e40af; transition: width 0.3s ease; }
+        .nav-link:hover::after, .active-nav::after { width: 100%; }
+        .active-nav { color: #1e40af; font-weight: 600; }
+        .contact-input:focus { border-color: #1e40af; box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1); outline: none; }
+    </style>
+</head>
+<body class="text-slate-800 flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="text-2xl font-bold text-slate-900 tracking-tight">ASR<span class="text-blue-700">.</span></div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+                    <a href="index.html" class="nav-link hover:text-blue-700 transition">Home</a>
+                    <a href="resume.html" class="nav-link hover:text-blue-700 transition">Resume & Skills</a>
+                    <a href="projects.html" class="nav-link hover:text-blue-700 transition">Projects</a>
+                    <a href="contact.html" class="nav-link active-nav">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-16 fade-in">
+                <h1 class="text-4xl font-bold text-slate-900 mb-4">Get in Touch</h1>
+                <p class="text-slate-500">I am actively seeking opportunities in Software Engineering, Machine Learning, or Cloud-related roles.</p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden flex flex-col md:flex-row fade-in" style="animation-delay: 0.1s;">
+                
+                <!-- Contact Info Panel -->
+                <div class="bg-slate-900 text-white p-10 md:w-2/5 flex flex-col justify-between">
+                    <div>
+                        <h2 class="text-2xl font-bold mb-6">Contact Information</h2>
+                        <p class="text-slate-400 text-sm mb-10 leading-relaxed">Fill out the form and I will get back to you within 24 hours.</p>
+                        
+                        <div class="space-y-6">
+                            <a href="mailto:arandrarajput829@gmail.com" class="flex items-center text-slate-300 hover:text-white transition group">
+                                <i class="fas fa-envelope text-blue-500 mr-4 text-xl group-hover:scale-110 transition"></i>
+                                <span>arandrarajput829@gmail.com</span>
+                            </a>
+                            <div class="flex items-center text-slate-300">
+                                <i class="fas fa-phone-alt text-blue-500 mr-4 text-xl"></i>
+                                <span>+91 8889773474</span>
+                            </div>
+                            <div class="flex items-center text-slate-300">
+                                <i class="fas fa-map-marker-alt text-blue-500 mr-4 text-xl"></i>
+                                <span>Bhopal, Madhya Pradesh</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-16 flex space-x-4">
+                        <a href="https://github.com/Singh-Coders" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 transition">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/arendra-singh-rajput" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form Panel -->
+                <div class="p-10 md:w-3/5">
+                    <form id="contactForm" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-2">First Name</label>
+                                <input type="text" class="contact-input w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 text-slate-900 transition" placeholder="John">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-2">Last Name</label>
+                                <input type="text" class="contact-input w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 text-slate-900 transition" placeholder="Doe">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-2">Email Address</label>
+                            <input type="email" class="contact-input w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 text-slate-900 transition" placeholder="john@example.com">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-2">Message</label>
+                            <textarea rows="4" class="contact-input w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 text-slate-900 transition resize-none" placeholder="How can I help you?"></textarea>
+                        </div>
+
+                        <button type="button" onclick="alert('This is a static demo. In a real environment, this would submit the form.')" class="w-full bg-blue-700 text-white font-medium py-3 px-4 rounded-lg hover:bg-blue-800 transition shadow-md">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 mt-auto">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-sm">&copy; 2026 Arendra Singh Rajput. All rights reserved.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="https://github.com/Singh-Coders" target="_blank" class="hover:text-white transition"><i class="fab fa-github text-xl"></i></a>
+                <a href="https://linkedin.com/in/arendra-singh-rajput" target="_blank" class="hover:text-white transition"><i class="fab fa-linkedin text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
