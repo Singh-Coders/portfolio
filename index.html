@@ -3,129 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Arendra Sing Rajput | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Arendra Singh Rajput - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        .fade-in { animation: fadeIn 1s ease-in forwards; opacity: 0; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .nav-link { position: relative; }
+        .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background-color: #1e40af; transition: width 0.3s ease; }
+        .nav-link:hover::after, .active-nav::after { width: 100%; }
+        .active-nav { color: #1e40af; font-weight: 600; }
+    </style>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <h1>Arendra Sing Rajput</h1>
-            <p>BTech Student | Aspiring Web Developer</p>
-        </div>
-    </header>
-    <!-- Photo Section -->
-    <section id="photo">
-        <div class="container">
-            <h2>My Photo</h2>
-            <div class="photo-container">
-                <img src="/image/download.png" alt="Arendra Sing Rajput">
-            </div>
-        </div>
-    </section>
+<body class="text-slate-800 flex flex-col min-h-screen">
 
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-           <pre><p> Hi, I'm <b> Arendra </b>,pursuing btech at <b> jagran lakecity univercity bhopal </b> currently i am in my 2 year.
-        I'm currently working on building a portfolio website and am aiming to become a web developer. 
-        I'm always eager to learn and take on new challenges.</p></pre>
-        </div>
-        <div class="container">
-            <button onclick="window.location.href='about.html'">Learn More About Me</button>
-        </div>
-    </section>
-    <section id="education">
-        <h2>Education</h2>
-        
-        
-        <div class="education-item">
-          <h3>High School</h3>
-          <p><strong>School:</strong> St. Thomas High School</p>
-          <p><strong>Class:</strong> 10th Grade</p>
-          <p><strong>Marks:</strong> 59% (General Promotion due to COVID-19)</p>
-          <p><strong>Year:</strong> 2019-2020</p>
-        </div>
-        
-      
-        <div class="education-item">
-          <h3>Higher Secondary School</h3>
-          <p><strong>School:</strong> Chaitanya Higher Secondary School</p>
-          <p><strong>Class:</strong> 12th Grade</p>
-          <p><strong>Marks:</strong> 76%</p>
-          <p><strong>Year:</strong> 2022-2023</p>
-        </div>
-        
- 
-        <div class="education-item">
-          <h3>Graduation</h3>
-          <p><strong>Degree:</strong> B.Tech in Computer Science</p>
-          <p><strong>University:</strong> Jagran Lakecity University, Bhopal</p>
-          <p><strong>Semester:</strong> 4th Semester</p>
-          <p><strong>SGPA:</strong> 7.51</p>
-          <p><strong>Year:</strong> 2023-2027 </p>
-        </div>
-      </section>
-    <section id="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skill">
-                <h3>C and C++</h3>
-                <div class="skill-bar">
-                    <div class="skill-progress c-cpp"></div>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="text-2xl font-bold text-slate-900 tracking-tight">ASR<span class="text-blue-700">.</span></div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+                    <a href="index.html" class="nav-link active-nav">Home</a>
+                    <a href="resume.html" class="nav-link hover:text-blue-700 transition">Resume & Skills</a>
+                    <a href="projects.html" class="nav-link hover:text-blue-700 transition">Projects</a>
+                    <a href="contact.html" class="nav-link hover:text-blue-700 transition">Contact</a>
                 </div>
-                <span>69%</span>
-            </div>
-            <div class="skill">
-                <h3>Java</h3>
-                <div class="skill-bar">
-                    <div class="skill-progress java"></div>
-                </div>
-                <span>40%</span>
-            </div>
-            <div class="skill">
-                <h3>English Communication</h3>
-                <div class="skill-bar">
-                    <div class="skill-progress english"></div>
-                </div>
-                <span>60%</span>
             </div>
         </div>
-    </section>
-    <button id="scrollTopBtn" title="Go to top">Top</button>
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Arendra Sing Rajput | All Rights Reserved</p>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center pt-10 pb-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-3/5 fade-in">
+                <p class="text-blue-700 font-semibold mb-3 tracking-wide uppercase text-sm">Portfolio</p>
+                <h1 class="text-5xl md:text-6xl font-bold text-slate-900 leading-tight mb-6">
+                    Arendra Singh <br/> Rajput
+                </h1>
+                <div class="h-8 mb-6">
+                    <p class="text-xl text-slate-600 font-medium" id="typewriter"></p>
+                </div>
+                <p class="text-slate-600 mb-8 leading-relaxed text-lg max-w-xl">
+                    Final-year B.Tech Computer Science Engineering student with a strong foundation in problem-solving, machine learning, and cloud fundamentals. Seeking an entry-level opportunity to apply technical skills to impactful real-world challenges.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="projects.html" class="bg-blue-700 text-white px-8 py-3 rounded-md font-medium hover:bg-blue-800 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">View Projects</a>
+                    <a href="contact.html" class="bg-white text-slate-800 border border-slate-300 px-8 py-3 rounded-md font-medium hover:bg-slate-50 transition shadow-sm">Get in Touch</a>
+                </div>
+            </div>
+            <div class="md:w-2/5 flex justify-center fade-in" style="animation-delay: 0.2s;">
+                <div class="relative w-72 h-72 rounded-full border-8 border-white shadow-2xl bg-slate-200 flex items-center justify-center overflow-hidden group cursor-pointer">
+                    <img src="profile.png" alt="Arendra Singh Rajput" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <!-- Fallback icon if profile.png doesn't exist yet -->
+                    <i class="fas fa-code text-6xl text-slate-400 group-hover:scale-110 transition duration-300 hidden"></i>
+                    <div class="absolute inset-0 bg-blue-700 opacity-0 group-hover:opacity-10 transition duration-300"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 mt-auto">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-sm">&copy; 2026 Arendra Singh Rajput. All rights reserved.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="https://github.com/Singh-Coders" target="_blank" class="hover:text-white transition"><i class="fab fa-github text-xl"></i></a>
+                <a href="https://linkedin.com/in/arendra-singh-rajput" target="_blank" class="hover:text-white transition"><i class="fab fa-linkedin text-xl"></i></a>
+            </div>
         </div>
     </footer>
-    <script>
- 
-        const scrollTopBtn = document.getElementById("scrollTopBtn");
 
-        window.onscroll = function () {
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                scrollTopBtn.style.display = "block";
-            } else {
-                scrollTopBtn.style.display = "none";
-            }
-        };
-
-    
-        scrollTopBtn.onclick = function () {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        };
-
-   
-        window.addEventListener("scroll", function () {
-            const skills = document.querySelectorAll(".skill-progress");
-            skills.forEach((skill) => {
-                const skillPosition = skill.getBoundingClientRect().top;
-                const screenPosition = window.innerHeight;
-                if (skillPosition < screenPosition) {
-                    skill.style.width = skill.getAttribute("data-progress");
-                }
-            });
-        });
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
